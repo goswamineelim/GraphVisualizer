@@ -102,10 +102,12 @@ export default function GraphInput() {
             addVertex((prev) => {
               if (!isNaN(parseInt(formData.get('node1').trim())))
                 return new Set(prev).add(parseInt(formData.get('node1').trim()));
+              else return prev;
             });
             addVertex((prev) => {
               if (!isNaN(parseInt(formData.get('node2').trim())))
                 return new Set(prev).add(parseInt(formData.get('node2').trim()));
+              else return prev;
             });
             setEdges((prev) => {
               const newEdges = [
